@@ -1,0 +1,423 @@
+sources:
+  - key: direct_discovery
+    name: Direct Discovery
+    adapter: direct_discovery
+    implemented: true
+    manual_only: false
+    submission: none
+    cadence: daily
+    target_env: JOBHUB_WATCHLIST_FILE
+  - key: adzuna
+    name: Adzuna
+    adapter: adzuna
+    implemented: true
+    manual_only: false
+    submission: none
+    cadence: daily
+    required_env: JOBHUB_ADZUNA_APP_ID,JOBHUB_ADZUNA_APP_KEY
+  - key: arbeitnow
+    name: Arbeitnow
+    adapter: arbeitnow
+    implemented: true
+    manual_only: false
+    submission: none
+    cadence: daily
+  - key: ashby
+    name: Ashby
+    adapter: ashby
+    implemented: true
+    manual_only: false
+    submission: none
+    cadence: daily
+    target_env: JOBHUB_ASHBY_BOARDS
+  - key: greenhouse
+    name: Greenhouse
+    adapter: greenhouse
+    implemented: true
+    manual_only: false
+    submission: none
+    cadence: daily
+    target_env: JOBHUB_GREENHOUSE_BOARDS
+  - key: jooble
+    name: Jooble
+    adapter: jooble
+    implemented: true
+    manual_only: false
+    submission: none
+    cadence: daily
+    required_env: JOBHUB_JOOBLE_API_KEY
+  - key: lever
+    name: Lever
+    adapter: lever
+    implemented: true
+    manual_only: false
+    submission: none
+    cadence: daily
+    target_env: JOBHUB_LEVER_COMPANIES
+  - key: recruitee
+    name: Recruitee
+    adapter: recruitee
+    implemented: true
+    manual_only: false
+    submission: none
+    cadence: daily
+    target_env: JOBHUB_RECRUITEE_COMPANIES
+  - key: remotive
+    name: Remotive
+    adapter: remotive
+    implemented: true
+    manual_only: false
+    submission: none
+    cadence: daily
+  - key: rss
+    name: Rss
+    adapter: rss
+    implemented: true
+    manual_only: false
+    submission: none
+    cadence: daily
+    target_env: JOBHUB_RSS_FEEDS_FILE
+  - key: smartrecruiters
+    name: Smartrecruiters
+    adapter: smartrecruiters
+    implemented: true
+    manual_only: false
+    submission: none
+    cadence: daily
+    target_env: JOBHUB_SMARTRECRUITERS_COMPANIES
+  - key: usajobs
+    name: Usajobs
+    adapter: usajobs
+    implemented: true
+    manual_only: false
+    submission: none
+    cadence: daily
+    required_env: JOBHUB_USAJOBS_USER_AGENT,JOBHUB_USAJOBS_AUTH_KEY
+  - key: upwork
+    name: Upwork
+    adapter: upwork
+    implemented: true
+    manual_only: false
+    submission: none
+    cadence: daily
+    required_env: JOBHUB_UPWORK_CLIENT_ID
+  - key: imap
+    name: Imap
+    adapter: imap
+    implemented: true
+    manual_only: false
+    submission: none
+    cadence: daily
+    required_env: JOBHUB_IMAP_HOST,JOBHUB_IMAP_USERNAME,JOBHUB_IMAP_PASSWORD,JOBHUB_IMAP_ALERT_SENDERS
+  - key: watchlist
+    name: Watchlist
+    adapter: watchlist
+    implemented: true
+    manual_only: false
+    submission: none
+    cadence: daily
+    target_env: JOBHUB_WATCHLIST_FILE
+  - key: work_with_linear
+    name: Work With Linear
+    adapter: work_with_linear
+    implemented: true
+    manual_only: false
+    submission: none
+    cadence: daily
+  - key: wellfound
+    name: Wellfound
+    adapter: wellfound
+    implemented: true
+    manual_only: false
+    submission: none
+    cadence: daily
+    docs_url: https://wellfound.com/jobs
+    implementation_note: Optional browser discovery; availability depends on public pages. Manual capture remains available.
+  - key: weloveproduct
+    name: WeLoveProduct
+    adapter: weloveproduct
+    implemented: true
+    manual_only: false
+    submission: none
+    cadence: daily
+    docs_url: https://weloveproduct.co/
+    implementation_note: Optional browser discovery; availability depends on public pages. Manual capture remains available.
+  - key: mind_the_product
+    name: Mind the Product Jobs
+    adapter: mind_the_product
+    implemented: true
+    manual_only: false
+    submission: none
+    cadence: daily
+    docs_url: https://www.mindtheproduct.com/jobs/
+    implementation_note: Optional browser discovery; availability depends on public pages. Manual capture remains available.
+  - key: dribbble
+    name: Dribbble Jobs
+    adapter: dribbble
+    implemented: true
+    manual_only: false
+    submission: none
+    cadence: daily
+    docs_url: https://dribbble.com/jobs
+    implementation_note: Optional browser discovery; availability depends on public pages. Manual capture remains available.
+  - key: levels_fyi
+    name: Levels.fyi Jobs
+    adapter: levels_fyi
+    implemented: true
+    manual_only: false
+    submission: none
+    cadence: daily
+    docs_url: https://www.levels.fyi/jobs
+    implementation_note: Optional browser discovery; availability depends on public pages. Manual capture remains available.
+  - key: pocit
+    name: POCIT Jobs
+    adapter: pocit
+    implemented: true
+    manual_only: false
+    submission: none
+    cadence: daily
+    docs_url: https://www.pocitjobs.com/
+    implementation_note: Optional browser discovery; availability depends on public pages. Manual capture remains available.
+  - key: y_combinator
+    name: Y Combinator Jobs
+    adapter: y_combinator
+    implemented: true
+    manual_only: false
+    submission: none
+    cadence: daily
+    docs_url: https://www.ycombinator.com/jobs
+    implementation_note: Optional browser discovery; availability depends on public pages. Manual capture remains available.
+  - key: resources_for_humans
+    name: Resources for Humans / Lattice
+    adapter: resources_for_humans
+    implemented: true
+    manual_only: false
+    submission: none
+    cadence: daily
+    docs_url: https://hrjobs.lattice.com/
+    implementation_note: Optional browser discovery; availability depends on public pages. Manual capture remains available.
+  - key: built_in
+    name: Built In
+    adapter: built_in
+    implemented: true
+    manual_only: false
+    submission: none
+    cadence: daily
+    docs_url: https://builtin.com/jobs
+    implementation_note: Optional browser discovery; availability depends on public pages. Manual capture remains available.
+  - key: the_muse
+    name: The Muse
+    adapter: the_muse
+    implemented: true
+    manual_only: false
+    submission: none
+    cadence: daily
+    docs_url: https://www.themuse.com/search/jobs
+    implementation_note: Optional browser discovery; availability depends on public pages. Manual capture remains available.
+  - key: remote_com
+    name: Remote.com Jobs
+    adapter: remote_com
+    implemented: true
+    manual_only: false
+    submission: none
+    cadence: daily
+    docs_url: https://remote.com/jobs
+    implementation_note: Optional browser discovery; availability depends on public pages. Manual capture remains available.
+  - key: welcome_to_the_jungle
+    name: Welcome to the Jungle
+    adapter: welcome_to_the_jungle
+    implemented: true
+    manual_only: false
+    submission: none
+    cadence: daily
+    docs_url: https://www.welcometothejungle.com/en/jobs
+    implementation_note: Optional browser discovery; availability depends on public pages. Manual capture remains available.
+  - key: people_ops_job_board
+    name: The People Ops Job Board
+    adapter: people_ops_job_board
+    implemented: true
+    manual_only: false
+    submission: none
+    cadence: daily
+    docs_url: https://www.thepeopleopsjobboard.com/
+    implementation_note: Optional browser discovery; availability depends on public pages. Manual capture remains available.
+  - key: blind
+    name: Blind Jobs
+    adapter: blind
+    implemented: true
+    manual_only: false
+    submission: none
+    cadence: daily
+    docs_url: https://www.teamblind.com/jobs
+    implementation_note: Optional browser discovery; availability depends on public pages. Manual capture remains available.
+  - key: index_ventures
+    name: Index Ventures Portfolio Jobs
+    adapter: index_ventures
+    implemented: true
+    manual_only: false
+    submission: none
+    cadence: daily
+    docs_url: https://www.indexventures.com/startup-jobs
+    implementation_note: Optional browser discovery; availability depends on public pages. Manual capture remains available.
+  - key: earlybird
+    name: Earlybird Portfolio Jobs
+    adapter: earlybird
+    implemented: true
+    manual_only: false
+    submission: none
+    cadence: daily
+    docs_url: https://jobs.earlybird.com/jobs
+    implementation_note: Optional browser discovery; availability depends on public pages. Manual capture remains available.
+  - key: general_catalyst
+    name: General Catalyst Portfolio Jobs
+    adapter: general_catalyst
+    implemented: true
+    manual_only: false
+    submission: none
+    cadence: daily
+    docs_url: https://jobs.generalcatalyst.com/jobs
+    implementation_note: Optional browser discovery; availability depends on public pages. Manual capture remains available.
+  - key: speedinvest
+    name: Speedinvest Portfolio Jobs
+    adapter: speedinvest
+    implemented: true
+    manual_only: false
+    submission: none
+    cadence: daily
+    docs_url: https://careers.speedinvest.com/jobs
+    implementation_note: Optional browser discovery; availability depends on public pages. Manual capture remains available.
+  - key: planet_a
+    name: Planet A Portfolio Jobs
+    adapter: planet_a
+    implemented: true
+    manual_only: false
+    submission: none
+    cadence: daily
+    docs_url: https://jobs.planet-a.com/jobs
+    implementation_note: Optional browser discovery; availability depends on public pages. Manual capture remains available.
+  - key: antler
+    name: Antler Portfolio Jobs
+    adapter: antler
+    implemented: true
+    manual_only: false
+    submission: none
+    cadence: daily
+    docs_url: https://careers.antler.co/jobs
+    implementation_note: Optional browser discovery; availability depends on public pages. Manual capture remains available.
+  - key: creandum
+    name: Creandum Portfolio Jobs
+    adapter: creandum
+    implemented: true
+    manual_only: false
+    submission: none
+    cadence: daily
+    docs_url: https://jobs.creandum.com/jobs
+    implementation_note: Optional browser discovery; availability depends on public pages. Manual capture remains available.
+  - key: kleiner_perkins
+    name: Kleiner Perkins Portfolio Jobs
+    adapter: kleiner_perkins
+    implemented: true
+    manual_only: false
+    submission: none
+    cadence: daily
+    docs_url: https://jobs.kleinerperkins.com/jobs
+    implementation_note: Optional browser discovery; availability depends on public pages. Manual capture remains available.
+  - key: work_with_indies
+    name: Work With Indies
+    adapter: work_with_indies
+    implemented: true
+    manual_only: false
+    submission: none
+    cadence: daily
+    docs_url: https://www.workwithindies.com/
+    implementation_note: Optional browser discovery; availability depends on public pages. Manual capture remains available.
+  - key: career_vault
+    name: Career Vault
+    adapter: career_vault
+    implemented: true
+    manual_only: false
+    submission: none
+    cadence: daily
+    docs_url: https://careervault.io/
+    implementation_note: Optional browser discovery; availability depends on public pages. Manual capture remains available.
+  - key: escape_the_city
+    name: Escape the City
+    adapter: escape_the_city
+    implemented: true
+    manual_only: false
+    submission: none
+    cadence: daily
+    docs_url: https://www.escapethecity.org/search/jobs
+    implementation_note: Optional browser discovery; availability depends on public pages. Manual capture remains available.
+  - key: open_to_work_remote
+    name: Open to Work Remote
+    adapter: open_to_work_remote
+    implemented: true
+    manual_only: false
+    submission: none
+    cadence: daily
+    docs_url: https://opentoworkremote.com/
+    implementation_note: Optional browser discovery; availability depends on public pages. Manual capture remains available.
+  - key: experimentation_jobs
+    name: Experimentation Jobs
+    adapter: experimentation_jobs
+    implemented: true
+    manual_only: false
+    submission: none
+    cadence: daily
+    docs_url: https://experimentationjobs.com/
+    implementation_note: Optional browser discovery; availability depends on public pages. Manual capture remains available.
+  - key: people_first_jobs
+    name: People-First Jobs
+    adapter: people_first_jobs
+    implemented: true
+    manual_only: false
+    submission: none
+    cadence: daily
+    docs_url: https://peoplefirstjobs.com/jobs
+    implementation_note: Optional browser discovery; availability depends on public pages. Manual capture remains available.
+  - key: people_ops_jobs
+    name: People Operations Jobs
+    adapter: people_ops_jobs
+    implemented: true
+    manual_only: false
+    submission: none
+    cadence: daily
+    docs_url: https://peopleopsjobs.io/
+    implementation_note: Optional browser discovery; availability depends on public pages. Manual capture remains available.
+  - key: fractional_jobs
+    name: Fractional Jobs
+    adapter: fractional_jobs
+    implemented: true
+    manual_only: false
+    submission: none
+    cadence: daily
+    docs_url: https://fractionaljobs.io/
+    implementation_note: Optional browser discovery; availability depends on public pages. Manual capture remains available.
+  - key: product_jobs_anywhere
+    name: Product Jobs Anywhere
+    adapter: product_jobs_anywhere
+    implemented: true
+    manual_only: false
+    submission: none
+    cadence: daily
+    docs_url: https://productjobsanywhere.com/
+    implementation_note: Optional browser discovery; availability depends on public pages. Manual capture remains available.
+  - key: elixir_jobs
+    name: Elixir Jobs
+    adapter: elixir_jobs
+    implemented: true
+    manual_only: false
+    submission: none
+    cadence: daily
+    docs_url: https://elixirjobs.net/
+    implementation_note: Optional browser discovery; availability depends on public pages. Manual capture remains available.
+  - key: design_systems_jobs
+    name: Design Systems Jobs
+    adapter: design_systems_jobs
+    implemented: true
+    manual_only: false
+    submission: none
+    cadence: daily
+    docs_url: https://designsystems.jobs/
+    implementation_note: Optional browser discovery; availability depends on public pages. Manual capture remains available.

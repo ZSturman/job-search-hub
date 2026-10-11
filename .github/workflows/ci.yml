@@ -1,0 +1,34 @@
+name: Isolated checks
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  checks:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+        python: ['3.11', '3.12']
+    runs-on: ${{ matrix.os }}
+    env:
+      JOBHUB_HOME: ${{ runner.temp }}/jobhub
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          python-version: ${{ matrix.python }}
+      - run: uv sync --locked --python ${{ matrix.python }} --extra dev --extra resume --extra capture
+      - run: uv run --no-sync ruff check job_search_hub tests tools
+      - run: uv run --no-sync ruff format --check job_search_hub tests tools
+      - run: uv run --no-sync pytest
+      - run: uv run --no-sync python -m build
+      - run: uv run --no-sync python tools/check_release.py dist/*
+      - name: Wheel smoke test outside checkout
+        shell: bash
+        run: |
+          uv venv --python '${{ matrix.python }}' "$RUNNER_TEMP/wheel-smoke"
+          uv pip install --python "$RUNNER_TEMP/wheel-smoke/bin/python" dist/*.whl
+          cd "$RUNNER_TEMP"
+          "$RUNNER_TEMP/wheel-smoke/bin/jobhub" --help
+          "$RUNNER_TEMP/wheel-smoke/bin/jobhub" --version
+          "$RUNNER_TEMP/wheel-smoke/bin/jobhub" status
+          "$RUNNER_TEMP/wheel-smoke/bin/jobhub" sources catalog
