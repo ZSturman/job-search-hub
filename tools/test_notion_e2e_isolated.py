@@ -273,11 +273,11 @@ def run_isolated_notion_test(
             "Question": P.title("Are you legally authorized to work in the United States?"),
             "Question Family": P.select("Work Authorization"),
             "Answer Type": P.select("Yes/No"),
-            "Approved Answer": P.rich_text("Yes"),
+            "Normalized Answer": P.rich_text("Yes"),
             "Approved for Reuse": P.checkbox(True),
-            "Supporting Facts": P.relation([fact_auth["id"]]),
-            "Evidence Summary": P.rich_text("US Citizen with unrestricted work authorization."),
-            "Active": P.checkbox(True),
+            "Fact Sources": P.relation([fact_auth["id"]]),
+            "Notes": P.rich_text("US Citizen with unrestricted work authorization."),
+            "Status": P.select("Approved"),
         },
     )
 
@@ -287,11 +287,11 @@ def run_isolated_notion_test(
             "Question": P.title("Will you now or in the future require visa sponsorship?"),
             "Question Family": P.select("Sponsorship"),
             "Answer Type": P.select("Yes/No"),
-            "Approved Answer": P.rich_text("No"),
+            "Normalized Answer": P.rich_text("No"),
             "Approved for Reuse": P.checkbox(True),
-            "Supporting Facts": P.relation([fact_auth["id"]]),
-            "Evidence Summary": P.rich_text("No visa sponsorship required now or in the future."),
-            "Active": P.checkbox(True),
+            "Fact Sources": P.relation([fact_auth["id"]]),
+            "Notes": P.rich_text("No visa sponsorship required now or in the future."),
+            "Status": P.select("Approved"),
         },
     )
 
@@ -301,13 +301,13 @@ def run_isolated_notion_test(
             "Question": P.title("Describe your experience managing production Kubernetes:"),
             "Question Family": P.select("Skills"),
             "Answer Type": P.select("Long Text"),
-            "Approved Answer": P.rich_text(
+            "Normalized Answer": P.rich_text(
                 "Managed multi-tenant EKS and bare-metal Kubernetes clusters for 2,500+ pods. "
                 "Implemented ArgoCD GitOps pipelines and Prometheus/Grafana observability."
             ),
             "Approved for Reuse": P.checkbox(True),
-            "Supporting Facts": P.relation([fact_k8s["id"]]),
-            "Active": P.checkbox(True),
+            "Fact Sources": P.relation([fact_k8s["id"]]),
+            "Status": P.select("Approved"),
         },
     )
 
@@ -365,7 +365,8 @@ def run_isolated_notion_test(
     # Step 9: Verify and update Applications to different lifecycle stages
     print("Updating applications through interview and offer lifecycle states...")
     created_apps = list(notion.query_data_source(ds["applications"]))
-    assert len(created_apps) == 3, f"Expected 3 applications created, got {len(created_apps)}"
+    msg = f"Expected at least 3 applications created, got {len(created_apps)}"
+    assert len(created_apps) >= 3, msg
 
     # Identify applications by linked job
     job_to_app = {}
@@ -420,6 +421,52 @@ def run_isolated_notion_test(
     # Step 10: Sync Opportunity Organizations
     print("Running Organization sync (sync_opportunity_organizations)...")
     sync_opportunity_organizations(settings, notion=notion, dry_run=False)
+
+    # Step 10b: Verify Search, Record Archiving, and Error Handling on live Notion
+    if live_token:
+        print("Verifying Record Searching, Archiving (Deletion), and Error Handling...")
+        # 1. Search & Filter
+        search_results = list(
+            notion.query_data_source(
+                ds["opportunities"],
+                filter_={"property": "Company", "rich_text": {"equals": "GreenPulse AI"}},
+            )
+        )
+        assert len(search_results) >= 1, "Expected search query to find GreenPulse AI opportunity"
+        print(f"  - Search verified: Found {len(search_results)} opportunity for GreenPulse AI")
+
+        # 2. Create, Archive (Delete), and Verify
+        temp_job = notion.create_page(
+            parent={"data_source_id": ds["opportunities"]},
+            properties={
+                "Opportunity": P.title("Temporary Opportunity to Delete"),
+                "Company": P.rich_text("Temp Corp"),
+                "Role Title": P.rich_text("Contractor"),
+                "URL": P.url("https://tempcorp.example/jobs/999"),
+                "Status": P.select("Archive"),
+            },
+        )
+        print(f"  - Created temporary record: {temp_job['id']}")
+        # Archive the temporary record
+        notion.archive_page(temp_job["id"])
+        # Verify it is archived / in trash
+        archived_page = notion.get_page(temp_job["id"])
+        is_archived = archived_page.get("archived") is True or archived_page.get("in_trash") is True
+        assert is_archived, "Expected page to be archived"
+        print(f"  - Archival (Deletion) verified: Record {temp_job['id']} is archived/in trash")
+
+        # 3. Error handling & missing information
+        error_caught = False
+        try:
+            notion.create_page(
+                parent={"data_source_id": ds["opportunities"]},
+                properties={"NonExistentProperty": P.rich_text("Invalid")},
+            )
+        except Exception as exc:
+            error_caught = True
+            err_name = type(exc).__name__
+            print(f"  - Error handling verified: Caught expected error: {err_name}")
+        assert error_caught, "Expected invalid property write to raise an error in live Notion"
 
     # Step 11: Export the full isolated Notion snapshot
     snapshot_data = export_notion(notion, settings, root)

@@ -525,6 +525,75 @@
           }
         },
         "url": "https://notion.so/00000000-0000-0000-0000-000000000198"
+      },
+      {
+        "id": "00000000-0000-0000-0000-0000000001a5",
+        "parent": {
+          "type": "data_source_id",
+          "data_source_id": "00000000-0000-0000-0000-00000000006b"
+        },
+        "properties": {
+          "Opportunity": {
+            "title": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Temporary Opportunity to Delete"
+                }
+              }
+            ]
+          },
+          "Company": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Temp Corp"
+                }
+              }
+            ]
+          },
+          "Role Title": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Contractor"
+                }
+              }
+            ]
+          },
+          "URL": {
+            "url": "https://tempcorp.example/jobs/999"
+          },
+          "Status": {
+            "select": {
+              "name": "Archive"
+            }
+          }
+        },
+        "url": "https://notion.so/00000000-0000-0000-0000-0000000001a5",
+        "in_trash": true
+      },
+      {
+        "id": "00000000-0000-0000-0000-0000000001a6",
+        "parent": {
+          "type": "data_source_id",
+          "data_source_id": "00000000-0000-0000-0000-00000000006b"
+        },
+        "properties": {
+          "NonExistentProperty": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Invalid"
+                }
+              }
+            ]
+          }
+        },
+        "url": "https://notion.so/00000000-0000-0000-0000-0000000001a6"
       }
     ],
     "applications": [
@@ -1177,7 +1246,7 @@
               "name": "Yes/No"
             }
           },
-          "Approved Answer": {
+          "Normalized Answer": {
             "rich_text": [
               {
                 "type": "text",
@@ -1190,14 +1259,14 @@
           "Approved for Reuse": {
             "checkbox": true
           },
-          "Supporting Facts": {
+          "Fact Sources": {
             "relation": [
               {
                 "id": "00000000-0000-0000-0000-00000000019b"
               }
             ]
           },
-          "Evidence Summary": {
+          "Notes": {
             "rich_text": [
               {
                 "type": "text",
@@ -1207,8 +1276,10 @@
               }
             ]
           },
-          "Active": {
-            "checkbox": true
+          "Status": {
+            "select": {
+              "name": "Approved"
+            }
           }
         },
         "url": "https://notion.so/00000000-0000-0000-0000-00000000019c"
@@ -1240,7 +1311,7 @@
               "name": "Yes/No"
             }
           },
-          "Approved Answer": {
+          "Normalized Answer": {
             "rich_text": [
               {
                 "type": "text",
@@ -1253,14 +1324,14 @@
           "Approved for Reuse": {
             "checkbox": true
           },
-          "Supporting Facts": {
+          "Fact Sources": {
             "relation": [
               {
                 "id": "00000000-0000-0000-0000-00000000019b"
               }
             ]
           },
-          "Evidence Summary": {
+          "Notes": {
             "rich_text": [
               {
                 "type": "text",
@@ -1270,8 +1341,10 @@
               }
             ]
           },
-          "Active": {
-            "checkbox": true
+          "Status": {
+            "select": {
+              "name": "Approved"
+            }
           }
         },
         "url": "https://notion.so/00000000-0000-0000-0000-00000000019d"
@@ -1303,7 +1376,7 @@
               "name": "Long Text"
             }
           },
-          "Approved Answer": {
+          "Normalized Answer": {
             "rich_text": [
               {
                 "type": "text",
@@ -1316,15 +1389,17 @@
           "Approved for Reuse": {
             "checkbox": true
           },
-          "Supporting Facts": {
+          "Fact Sources": {
             "relation": [
               {
                 "id": "00000000-0000-0000-0000-00000000019a"
               }
             ]
           },
-          "Active": {
-            "checkbox": true
+          "Status": {
+            "select": {
+              "name": "Approved"
+            }
           }
         },
         "url": "https://notion.so/00000000-0000-0000-0000-00000000019e"
