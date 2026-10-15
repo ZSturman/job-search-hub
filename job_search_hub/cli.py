@@ -129,7 +129,7 @@ def parser():
     resumes = sub.add_parser(
         "resumes", help="Catalog your PDFs and suggest reusable resume types"
     ).add_subparsers(dest="action", required=True)
-    resumes.add_parser("list")
+    resumes.add_parser("list").add_argument("--json", action="store_true", help="Output raw JSON")
     a = resumes.add_parser("add")
     a.add_argument("file", type=Path)
     a.add_argument("--title", required=True)

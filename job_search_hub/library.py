@@ -27,6 +27,7 @@ def add_resume(path: Path, title: str, tags=()) -> dict:
     rows = catalog()
     row = next((r for r in rows if r["id"] == doc_id), None)
     if row is None:
+        action = "created"
         row = {
             "id": doc_id,
             "title": title.strip(),
@@ -36,9 +37,10 @@ def add_resume(path: Path, title: str, tags=()) -> dict:
         private_write(app_paths().data / "resumes" / row["file"], data)
         rows.append(row)
     else:
+        action = "updated"
         row.update(title=title.strip(), tags=list(tags))
     write_json(app_paths().data / "resumes/index.json", rows)
-    return row
+    return {**row, "action": action}
 
 
 def sync_library(notion, settings):

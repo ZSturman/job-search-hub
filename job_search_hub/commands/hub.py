@@ -89,7 +89,23 @@ def remote_command(args):
         args.subcommand, args.print_url = "sources authorize", False
         return cmd_upwork_auth(args)
     if args.command == "resumes" and args.action == "list":
-        output(catalog())
+        rows = catalog()
+        if getattr(args, "json", False) or not rows:
+            output(rows)
+            return 0
+        from rich.console import Console
+        from rich.table import Table
+        from rich.text import Text
+
+        table = Table("Document ID", "Title", "Tags", "File", show_lines=True)
+        for r in rows:
+            table.add_row(
+                Text(r["id"][:16] + "…"),
+                Text(r.get("title", "")),
+                Text(", ".join(r.get("tags", [])) or "—"),
+                Text(r.get("file", "")),
+            )
+        Console().print(table)
         return 0
     if args.command == "resumes" and args.action == "add":
         output(add_resume(args.file, args.title, args.tag))
@@ -108,12 +124,29 @@ def remote_command(args):
     if args.command == "sources" and args.action == "catalog":
         from job_search_hub.source_catalog import load_source_catalog
 
-        output(
-            [
-                {"type": r.adapter_key, "name": r.name, "status": r.status}
-                for r in load_source_catalog(load_settings())
-            ]
-        )
+        items = []
+        for r in load_source_catalog(load_settings()):
+            entry = {
+                "type": r.adapter_key,
+                "name": r.name,
+                "status": r.status,
+            }
+            if r.status == "skipped":
+                if r.missing_env:
+                    entry["missing"] = list(r.missing_env)
+                    if any("target" in m.lower() for m in r.missing_env):
+                        entry["reason"] = (
+                            f"Requires target configuration in Notion or CLI "
+                            f"(jobhub sources add --type {r.adapter_key} --target <TARGET>)"
+                        )
+                    else:
+                        entry["reason"] = f"Requires credentials: {', '.join(r.missing_env)}"
+                else:
+                    entry["reason"] = "Missing targets or credentials"
+            elif r.status == "configured" and r.targets:
+                entry["targets"] = list(r.targets)
+            items.append(entry)
+        output(items)
         return 0
     with session(
         preview=preview,

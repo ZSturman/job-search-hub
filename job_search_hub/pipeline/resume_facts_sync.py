@@ -3,7 +3,9 @@
 from __future__ import annotations
 
 import hashlib
+import logging
 import re
+import warnings
 from dataclasses import dataclass, field
 from pathlib import Path
 
@@ -161,8 +163,14 @@ def extract_pdf_text(path: Path) -> str:
         from pypdf import PdfReader
     except ImportError as exc:
         raise RuntimeError("pypdf is required for resume fact sync") from exc
-    reader = PdfReader(str(path))
-    return "\n".join(page.extract_text() or "" for page in reader.pages).strip()
+    pypdf_logger = logging.getLogger("pypdf")
+    pypdf_logger.setLevel(logging.ERROR)
+    pypdf_logger.addHandler(logging.NullHandler())
+    pypdf_logger.propagate = False
+    with warnings.catch_warnings():
+        warnings.simplefilter("ignore")
+        reader = PdfReader(str(path))
+        return "\n".join(page.extract_text() or "" for page in reader.pages).strip()
 
 
 def _compact_text(value: str) -> str:

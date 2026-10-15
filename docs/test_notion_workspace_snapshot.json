@@ -1,0 +1,1769 @@
+{
+  "format": "jobhub-export-v1",
+  "root": "00000000-0000-0000-0000-00000000002a",
+  "sources": {
+    "opportunities": [
+      {
+        "id": "00000000-0000-0000-0000-000000000195",
+        "parent": {
+          "type": "data_source_id",
+          "data_source_id": "00000000-0000-0000-0000-00000000006b"
+        },
+        "properties": {
+          "Opportunity": {
+            "title": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Acme Cloud Infrastructure \u2022 Staff Platform Engineer"
+                }
+              }
+            ]
+          },
+          "Role Title": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Staff Platform Engineer"
+                }
+              }
+            ]
+          },
+          "Company": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Acme Cloud Infrastructure"
+                }
+              }
+            ]
+          },
+          "URL": {
+            "url": "https://acmecloud.example/careers/platform-engineer-401"
+          },
+          "Description": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Lead our Kubernetes infrastructure team. Architect multi-region mesh, build internal developer platforms, and ensure 99.99% uptime for core APIs. Requirements: 7+ years backend/platform experience, deep Kubernetes internals."
+                }
+              }
+            ]
+          },
+          "Location": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Remote (US)"
+                }
+              }
+            ]
+          },
+          "Remote Status": {
+            "select": {
+              "name": "Remote"
+            }
+          },
+          "Employment Type": {
+            "multi_select": [
+              {
+                "name": "Full-time"
+              }
+            ]
+          },
+          "Compensation Text": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "$195,000 - $225,000 + equity"
+                }
+              }
+            ]
+          },
+          "Compensation Min": {
+            "number": 195000
+          },
+          "Compensation Max": {
+            "number": 225000
+          },
+          "Compensation Unit": {
+            "select": {
+              "name": "Annual"
+            }
+          },
+          "Source": {
+            "select": {
+              "name": "greenhouse"
+            }
+          },
+          "My Decision": {
+            "select": {
+              "name": "Apply"
+            }
+          },
+          "Status": {
+            "select": {
+              "name": "Shortlisted"
+            }
+          },
+          "Application": {
+            "relation": [
+              {
+                "id": "00000000-0000-0000-0000-0000000001a2"
+              }
+            ]
+          },
+          "Next Action": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Choose a resume; apply manually on the employer site"
+                }
+              }
+            ]
+          },
+          "Organization": {
+            "relation": [
+              {
+                "id": "00000000-0000-0000-0000-000000000192"
+              }
+            ]
+          }
+        },
+        "url": "https://notion.so/00000000-0000-0000-0000-000000000195"
+      },
+      {
+        "id": "00000000-0000-0000-0000-000000000196",
+        "parent": {
+          "type": "data_source_id",
+          "data_source_id": "00000000-0000-0000-0000-00000000006b"
+        },
+        "properties": {
+          "Opportunity": {
+            "title": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Acme Cloud Infrastructure \u2022 Senior SRE (Distributed Systems)"
+                }
+              }
+            ]
+          },
+          "Role Title": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Senior SRE (Distributed Systems)"
+                }
+              }
+            ]
+          },
+          "Company": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Acme Cloud Infrastructure"
+                }
+              }
+            ]
+          },
+          "URL": {
+            "url": "https://acmecloud.example/careers/sre-distributed-systems"
+          },
+          "Description": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Drive reliability and performance across petabyte-scale storage pipelines. Build automated chaos experiments and incident response automation."
+                }
+              }
+            ]
+          },
+          "Location": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Remote (US)"
+                }
+              }
+            ]
+          },
+          "Remote Status": {
+            "select": {
+              "name": "Remote"
+            }
+          },
+          "Employment Type": {
+            "multi_select": [
+              {
+                "name": "Full-time"
+              }
+            ]
+          },
+          "Compensation Text": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "$180,000 - $210,000"
+                }
+              }
+            ]
+          },
+          "Compensation Min": {
+            "number": 180000
+          },
+          "Compensation Max": {
+            "number": 210000
+          },
+          "Compensation Unit": {
+            "select": {
+              "name": "Annual"
+            }
+          },
+          "Source": {
+            "select": {
+              "name": "greenhouse"
+            }
+          },
+          "My Decision": {
+            "select": {
+              "name": "Shortlist"
+            }
+          },
+          "Status": {
+            "select": {
+              "name": "Shortlisted"
+            }
+          },
+          "Organization": {
+            "relation": [
+              {
+                "id": "00000000-0000-0000-0000-000000000192"
+              }
+            ]
+          }
+        },
+        "url": "https://notion.so/00000000-0000-0000-0000-000000000196"
+      },
+      {
+        "id": "00000000-0000-0000-0000-000000000197",
+        "parent": {
+          "type": "data_source_id",
+          "data_source_id": "00000000-0000-0000-0000-00000000006b"
+        },
+        "properties": {
+          "Opportunity": {
+            "title": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "GreenPulse AI \u2022 Principal Backend Architect"
+                }
+              }
+            ]
+          },
+          "Role Title": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Principal Backend Architect"
+                }
+              }
+            ]
+          },
+          "Company": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "GreenPulse AI"
+                }
+              }
+            ]
+          },
+          "URL": {
+            "url": "https://greenpulse.example/jobs/principal-backend-architect"
+          },
+          "Description": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Design real-time telemetry ingestion pipelines processing millions of sensors. Scale event streams with Kafka, Python, and Rust services deployed on AWS."
+                }
+              }
+            ]
+          },
+          "Location": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Remote (US/Canada)"
+                }
+              }
+            ]
+          },
+          "Remote Status": {
+            "select": {
+              "name": "Remote"
+            }
+          },
+          "Employment Type": {
+            "multi_select": [
+              {
+                "name": "Full-time"
+              }
+            ]
+          },
+          "Compensation Text": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "$200,000 - $240,000"
+                }
+              }
+            ]
+          },
+          "Compensation Min": {
+            "number": 200000
+          },
+          "Compensation Max": {
+            "number": 240000
+          },
+          "Compensation Unit": {
+            "select": {
+              "name": "Annual"
+            }
+          },
+          "Source": {
+            "select": {
+              "name": "lever"
+            }
+          },
+          "My Decision": {
+            "select": {
+              "name": "Apply"
+            }
+          },
+          "Status": {
+            "select": {
+              "name": "Shortlisted"
+            }
+          },
+          "Application": {
+            "relation": [
+              {
+                "id": "00000000-0000-0000-0000-0000000001a3"
+              }
+            ]
+          },
+          "Next Action": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Choose a resume; apply manually on the employer site"
+                }
+              }
+            ]
+          },
+          "Organization": {
+            "relation": [
+              {
+                "id": "00000000-0000-0000-0000-000000000193"
+              }
+            ]
+          }
+        },
+        "url": "https://notion.so/00000000-0000-0000-0000-000000000197"
+      },
+      {
+        "id": "00000000-0000-0000-0000-000000000198",
+        "parent": {
+          "type": "data_source_id",
+          "data_source_id": "00000000-0000-0000-0000-00000000006b"
+        },
+        "properties": {
+          "Opportunity": {
+            "title": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "VectorDB Labs \u2022 Senior Systems Engineer"
+                }
+              }
+            ]
+          },
+          "Role Title": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Senior Systems Engineer"
+                }
+              }
+            ]
+          },
+          "Company": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "VectorDB Labs"
+                }
+              }
+            ]
+          },
+          "URL": {
+            "url": "https://vectordb.example/careers/systems-engineer"
+          },
+          "Description": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Optimize SIMD vector index search latency. Write high-throughput storage engines and gRPC interfaces."
+                }
+              }
+            ]
+          },
+          "Location": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Remote (US)"
+                }
+              }
+            ]
+          },
+          "Remote Status": {
+            "select": {
+              "name": "Remote"
+            }
+          },
+          "Employment Type": {
+            "multi_select": [
+              {
+                "name": "Full-time"
+              }
+            ]
+          },
+          "Compensation Text": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "$185,000 - $220,000"
+                }
+              }
+            ]
+          },
+          "Compensation Min": {
+            "number": 185000
+          },
+          "Compensation Max": {
+            "number": 220000
+          },
+          "Compensation Unit": {
+            "select": {
+              "name": "Annual"
+            }
+          },
+          "Source": {
+            "select": {
+              "name": "ashby"
+            }
+          },
+          "My Decision": {
+            "select": {
+              "name": "Apply"
+            }
+          },
+          "Status": {
+            "select": {
+              "name": "Shortlisted"
+            }
+          },
+          "Application": {
+            "relation": [
+              {
+                "id": "00000000-0000-0000-0000-0000000001a4"
+              }
+            ]
+          },
+          "Next Action": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Choose a resume; apply manually on the employer site"
+                }
+              }
+            ]
+          },
+          "Organization": {
+            "relation": [
+              {
+                "id": "00000000-0000-0000-0000-000000000194"
+              }
+            ]
+          }
+        },
+        "url": "https://notion.so/00000000-0000-0000-0000-000000000198"
+      }
+    ],
+    "applications": [
+      {
+        "id": "00000000-0000-0000-0000-0000000001a2",
+        "parent": {
+          "type": "data_source_id",
+          "data_source_id": "00000000-0000-0000-0000-0000000000a3"
+        },
+        "properties": {
+          "Application": {
+            "title": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Acme Cloud Infrastructure \u2022 Staff Platform Engineer"
+                }
+              }
+            ]
+          },
+          "Opportunity": {
+            "relation": [
+              {
+                "id": "00000000-0000-0000-0000-000000000195"
+              }
+            ]
+          },
+          "Job URL": {
+            "url": "https://acmecloud.example/careers/platform-engineer-401"
+          },
+          "Status": {
+            "select": {
+              "name": "Submitted"
+            }
+          },
+          "Submission Mode": {
+            "select": {
+              "name": "Manual"
+            }
+          },
+          "Submitted At": {
+            "date": {
+              "start": "2026-10-15T16:29:11.000118+00:00"
+            }
+          },
+          "Confirmation Text": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Application received! Confirmation #ACM-2026-9481."
+                }
+              }
+            ]
+          },
+          "Receipt URL": {
+            "url": "https://acmecloud.example/confirmation/9481"
+          },
+          "My Notes": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Submitted with Staff Platform Resume. Referral from team."
+                }
+              }
+            ]
+          }
+        },
+        "url": "https://notion.so/00000000-0000-0000-0000-0000000001a2"
+      },
+      {
+        "id": "00000000-0000-0000-0000-0000000001a3",
+        "parent": {
+          "type": "data_source_id",
+          "data_source_id": "00000000-0000-0000-0000-0000000000a3"
+        },
+        "properties": {
+          "Application": {
+            "title": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "GreenPulse AI \u2022 Principal Backend Architect"
+                }
+              }
+            ]
+          },
+          "Opportunity": {
+            "relation": [
+              {
+                "id": "00000000-0000-0000-0000-000000000197"
+              }
+            ]
+          },
+          "Job URL": {
+            "url": "https://greenpulse.example/jobs/principal-backend-architect"
+          },
+          "Status": {
+            "select": {
+              "name": "Interviewing"
+            }
+          },
+          "Submission Mode": {
+            "select": {
+              "name": "Manual"
+            }
+          },
+          "Submitted At": {
+            "date": {
+              "start": "2026-10-10T12:00:00Z"
+            }
+          },
+          "Follow Up At": {
+            "date": {
+              "start": "2026-10-18T17:00:00Z"
+            }
+          },
+          "Confirmation Text": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Selected for Interview Round 1."
+                }
+              }
+            ]
+          },
+          "My Notes": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Technical architecture screen scheduled with VP of Engineering for Oct 18. Topic: High-throughput telemetry ingestion & Kafka partitioning strategy."
+                }
+              }
+            ]
+          }
+        },
+        "url": "https://notion.so/00000000-0000-0000-0000-0000000001a3"
+      },
+      {
+        "id": "00000000-0000-0000-0000-0000000001a4",
+        "parent": {
+          "type": "data_source_id",
+          "data_source_id": "00000000-0000-0000-0000-0000000000a3"
+        },
+        "properties": {
+          "Application": {
+            "title": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "VectorDB Labs \u2022 Senior Systems Engineer"
+                }
+              }
+            ]
+          },
+          "Opportunity": {
+            "relation": [
+              {
+                "id": "00000000-0000-0000-0000-000000000198"
+              }
+            ]
+          },
+          "Job URL": {
+            "url": "https://vectordb.example/careers/systems-engineer"
+          },
+          "Status": {
+            "select": {
+              "name": "Offer"
+            }
+          },
+          "Submission Mode": {
+            "select": {
+              "name": "Manual"
+            }
+          },
+          "Submitted At": {
+            "date": {
+              "start": "2026-10-01T10:00:00Z"
+            }
+          },
+          "My Notes": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Offer received: $195,000 base + 0.15% equity (4yr vest). Decision deadline: end of month."
+                }
+              }
+            ]
+          }
+        },
+        "url": "https://notion.so/00000000-0000-0000-0000-0000000001a4"
+      }
+    ],
+    "organizations": [
+      {
+        "id": "00000000-0000-0000-0000-000000000192",
+        "parent": {
+          "type": "data_source_id",
+          "data_source_id": "00000000-0000-0000-0000-0000000000b3"
+        },
+        "properties": {
+          "Organization": {
+            "title": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Acme Cloud Infrastructure"
+                }
+              }
+            ]
+          },
+          "Careers URL": {
+            "url": "https://acmecloud.example/careers"
+          },
+          "Homepage": {
+            "url": "https://acmecloud.example"
+          },
+          "Industry": {
+            "multi_select": [
+              {
+                "name": "Cloud & Infrastructure"
+              },
+              {
+                "name": "Developer Tools"
+              }
+            ]
+          },
+          "Remote Friendly": {
+            "select": {
+              "name": "Yes"
+            }
+          },
+          "Priority Tier": {
+            "select": {
+              "name": "1"
+            }
+          },
+          "Ethical Fit": {
+            "select": {
+              "name": "Positive"
+            }
+          },
+          "Locations": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "San Francisco, CA / Remote (US)"
+                }
+              }
+            ]
+          },
+          "Notes": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Series D infrastructure provider. Recruiter contact: Sarah Jenkins (sarah.j@acmecloud.example). Strong engineering blog, excellent Kubernetes tooling culture."
+                }
+              }
+            ]
+          },
+          "Active": {
+            "checkbox": true
+          }
+        },
+        "url": "https://notion.so/00000000-0000-0000-0000-000000000192"
+      },
+      {
+        "id": "00000000-0000-0000-0000-000000000193",
+        "parent": {
+          "type": "data_source_id",
+          "data_source_id": "00000000-0000-0000-0000-0000000000b3"
+        },
+        "properties": {
+          "Organization": {
+            "title": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "GreenPulse AI"
+                }
+              }
+            ]
+          },
+          "Careers URL": {
+            "url": "https://greenpulse.example/jobs"
+          },
+          "Homepage": {
+            "url": "https://greenpulse.example"
+          },
+          "Industry": {
+            "multi_select": [
+              {
+                "name": "Climate Tech"
+              },
+              {
+                "name": "AI & Machine Learning"
+              }
+            ]
+          },
+          "Remote Friendly": {
+            "select": {
+              "name": "Yes"
+            }
+          },
+          "Priority Tier": {
+            "select": {
+              "name": "1"
+            }
+          },
+          "Ethical Fit": {
+            "select": {
+              "name": "Positive"
+            }
+          },
+          "Locations": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Seattle, WA / Remote (North America)"
+                }
+              }
+            ]
+          },
+          "Notes": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Climate intelligence platform optimizing grid power. Recruiter: Marcus Vance. Engineering team is 35 people, fast interview turnaround."
+                }
+              }
+            ]
+          },
+          "Active": {
+            "checkbox": true
+          }
+        },
+        "url": "https://notion.so/00000000-0000-0000-0000-000000000193"
+      },
+      {
+        "id": "00000000-0000-0000-0000-000000000194",
+        "parent": {
+          "type": "data_source_id",
+          "data_source_id": "00000000-0000-0000-0000-0000000000b3"
+        },
+        "properties": {
+          "Organization": {
+            "title": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "VectorDB Labs"
+                }
+              }
+            ]
+          },
+          "Careers URL": {
+            "url": "https://vectordb.example/careers"
+          },
+          "Homepage": {
+            "url": "https://vectordb.example"
+          },
+          "Industry": {
+            "multi_select": [
+              {
+                "name": "Database"
+              },
+              {
+                "name": "Data Infrastructure"
+              }
+            ]
+          },
+          "Remote Friendly": {
+            "select": {
+              "name": "Yes"
+            }
+          },
+          "Priority Tier": {
+            "select": {
+              "name": "2"
+            }
+          },
+          "Ethical Fit": {
+            "select": {
+              "name": "Neutral"
+            }
+          },
+          "Locations": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "New York, NY / Remote (US)"
+                }
+              }
+            ]
+          },
+          "Notes": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Open-source vector search engine. High-performance C++ and Python codebase."
+                }
+              }
+            ]
+          },
+          "Active": {
+            "checkbox": true
+          }
+        },
+        "url": "https://notion.so/00000000-0000-0000-0000-000000000194"
+      }
+    ],
+    "resume_facts": [
+      {
+        "id": "00000000-0000-0000-0000-000000000199",
+        "parent": {
+          "type": "data_source_id",
+          "data_source_id": "00000000-0000-0000-0000-0000000000c6"
+        },
+        "properties": {
+          "Fact": {
+            "title": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Python (8+ years backend/distributed systems)"
+                }
+              }
+            ]
+          },
+          "Fact ID": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "pdf:backend-sre:skill:python-8yr"
+                }
+              }
+            ]
+          },
+          "Fact Type": {
+            "select": {
+              "name": "Skill"
+            }
+          },
+          "Category": {
+            "select": {
+              "name": "Backend"
+            }
+          },
+          "Value": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Python (asyncio, FastAPI, PyTorch, PySpark, packaging)"
+                }
+              }
+            ]
+          },
+          "Proficiency": {
+            "select": {
+              "name": "Expert"
+            }
+          },
+          "Verified": {
+            "checkbox": true
+          },
+          "Approved for Profile": {
+            "checkbox": true
+          },
+          "Approved for Applications": {
+            "checkbox": true
+          },
+          "Active": {
+            "checkbox": true
+          }
+        },
+        "url": "https://notion.so/00000000-0000-0000-0000-000000000199"
+      },
+      {
+        "id": "00000000-0000-0000-0000-00000000019a",
+        "parent": {
+          "type": "data_source_id",
+          "data_source_id": "00000000-0000-0000-0000-0000000000c6"
+        },
+        "properties": {
+          "Fact": {
+            "title": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Kubernetes & Cloud Infrastructure"
+                }
+              }
+            ]
+          },
+          "Fact ID": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "pdf:backend-sre:skill:k8s-cloud"
+                }
+              }
+            ]
+          },
+          "Fact Type": {
+            "select": {
+              "name": "Skill"
+            }
+          },
+          "Category": {
+            "select": {
+              "name": "DevOps"
+            }
+          },
+          "Value": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Kubernetes, Terraform, AWS (EKS, RDS, S3), Docker, Helm"
+                }
+              }
+            ]
+          },
+          "Proficiency": {
+            "select": {
+              "name": "Expert"
+            }
+          },
+          "Verified": {
+            "checkbox": true
+          },
+          "Approved for Profile": {
+            "checkbox": true
+          },
+          "Approved for Applications": {
+            "checkbox": true
+          },
+          "Active": {
+            "checkbox": true
+          }
+        },
+        "url": "https://notion.so/00000000-0000-0000-0000-00000000019a"
+      },
+      {
+        "id": "00000000-0000-0000-0000-00000000019b",
+        "parent": {
+          "type": "data_source_id",
+          "data_source_id": "00000000-0000-0000-0000-0000000000c6"
+        },
+        "properties": {
+          "Fact": {
+            "title": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "US Work Authorization (Citizen)"
+                }
+              }
+            ]
+          },
+          "Fact ID": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "profile:legal:work-auth-us"
+                }
+              }
+            ]
+          },
+          "Fact Type": {
+            "select": {
+              "name": "Preference"
+            }
+          },
+          "Category": {
+            "select": {
+              "name": "Other"
+            }
+          },
+          "Value": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Authorized to work in the US; no sponsorship needed"
+                }
+              }
+            ]
+          },
+          "Proficiency": {
+            "select": {
+              "name": "Expert"
+            }
+          },
+          "Verified": {
+            "checkbox": true
+          },
+          "Approved for Profile": {
+            "checkbox": true
+          },
+          "Approved for Applications": {
+            "checkbox": true
+          },
+          "Active": {
+            "checkbox": true
+          }
+        },
+        "url": "https://notion.so/00000000-0000-0000-0000-00000000019b"
+      }
+    ],
+    "answer_bank": [
+      {
+        "id": "00000000-0000-0000-0000-00000000019c",
+        "parent": {
+          "type": "data_source_id",
+          "data_source_id": "00000000-0000-0000-0000-0000000000e0"
+        },
+        "properties": {
+          "Question": {
+            "title": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Are you legally authorized to work in the United States?"
+                }
+              }
+            ]
+          },
+          "Question Family": {
+            "select": {
+              "name": "Work Authorization"
+            }
+          },
+          "Answer Type": {
+            "select": {
+              "name": "Yes/No"
+            }
+          },
+          "Approved Answer": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Yes"
+                }
+              }
+            ]
+          },
+          "Approved for Reuse": {
+            "checkbox": true
+          },
+          "Supporting Facts": {
+            "relation": [
+              {
+                "id": "00000000-0000-0000-0000-00000000019b"
+              }
+            ]
+          },
+          "Evidence Summary": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "US Citizen with unrestricted work authorization."
+                }
+              }
+            ]
+          },
+          "Active": {
+            "checkbox": true
+          }
+        },
+        "url": "https://notion.so/00000000-0000-0000-0000-00000000019c"
+      },
+      {
+        "id": "00000000-0000-0000-0000-00000000019d",
+        "parent": {
+          "type": "data_source_id",
+          "data_source_id": "00000000-0000-0000-0000-0000000000e0"
+        },
+        "properties": {
+          "Question": {
+            "title": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Will you now or in the future require visa sponsorship?"
+                }
+              }
+            ]
+          },
+          "Question Family": {
+            "select": {
+              "name": "Sponsorship"
+            }
+          },
+          "Answer Type": {
+            "select": {
+              "name": "Yes/No"
+            }
+          },
+          "Approved Answer": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "No"
+                }
+              }
+            ]
+          },
+          "Approved for Reuse": {
+            "checkbox": true
+          },
+          "Supporting Facts": {
+            "relation": [
+              {
+                "id": "00000000-0000-0000-0000-00000000019b"
+              }
+            ]
+          },
+          "Evidence Summary": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "No visa sponsorship required now or in the future."
+                }
+              }
+            ]
+          },
+          "Active": {
+            "checkbox": true
+          }
+        },
+        "url": "https://notion.so/00000000-0000-0000-0000-00000000019d"
+      },
+      {
+        "id": "00000000-0000-0000-0000-00000000019e",
+        "parent": {
+          "type": "data_source_id",
+          "data_source_id": "00000000-0000-0000-0000-0000000000e0"
+        },
+        "properties": {
+          "Question": {
+            "title": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Describe your experience managing production Kubernetes:"
+                }
+              }
+            ]
+          },
+          "Question Family": {
+            "select": {
+              "name": "Skills"
+            }
+          },
+          "Answer Type": {
+            "select": {
+              "name": "Long Text"
+            }
+          },
+          "Approved Answer": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Managed multi-tenant EKS and bare-metal Kubernetes clusters for 2,500+ pods. Implemented ArgoCD GitOps pipelines and Prometheus/Grafana observability."
+                }
+              }
+            ]
+          },
+          "Approved for Reuse": {
+            "checkbox": true
+          },
+          "Supporting Facts": {
+            "relation": [
+              {
+                "id": "00000000-0000-0000-0000-00000000019a"
+              }
+            ]
+          },
+          "Active": {
+            "checkbox": true
+          }
+        },
+        "url": "https://notion.so/00000000-0000-0000-0000-00000000019e"
+      }
+    ],
+    "qualification_requirements": [],
+    "scoring_criteria": [
+      {
+        "id": "00000000-0000-0000-0000-00000000016d",
+        "parent": {
+          "type": "data_source_id",
+          "data_source_id": "00000000-0000-0000-0000-000000000111"
+        },
+        "properties": {
+          "Criterion": {
+            "title": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Role and skill fit"
+                }
+              }
+            ]
+          },
+          "Key": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "role_skill_fit"
+                }
+              }
+            ]
+          },
+          "Category": {
+            "select": {
+              "name": "Skills"
+            }
+          },
+          "Active": {
+            "checkbox": true
+          },
+          "Weight": {
+            "number": 1
+          },
+          "Direction": {
+            "select": {
+              "name": "Positive"
+            }
+          },
+          "Evaluation Method": {
+            "select": {
+              "name": "LLM"
+            }
+          },
+          "Instructions": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Assess the job against approved profile facts and stated interests. Missing evidence is unknown. Do not invent experience or qualifications."
+                }
+              }
+            ]
+          },
+          "Lane Override": {
+            "select": {
+              "name": "None"
+            }
+          }
+        },
+        "url": "https://notion.so/00000000-0000-0000-0000-00000000016d"
+      },
+      {
+        "id": "00000000-0000-0000-0000-00000000016e",
+        "parent": {
+          "type": "data_source_id",
+          "data_source_id": "00000000-0000-0000-0000-000000000111"
+        },
+        "properties": {
+          "Criterion": {
+            "title": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Qualification fit"
+                }
+              }
+            ]
+          },
+          "Key": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "qualification_fit"
+                }
+              }
+            ]
+          },
+          "Category": {
+            "select": {
+              "name": "Skills"
+            }
+          },
+          "Active": {
+            "checkbox": true
+          },
+          "Weight": {
+            "number": 1
+          },
+          "Direction": {
+            "select": {
+              "name": "Positive"
+            }
+          },
+          "Evaluation Method": {
+            "select": {
+              "name": "LLM"
+            }
+          },
+          "Instructions": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Assess the job against approved profile facts and stated interests. Missing evidence is unknown. Do not invent experience or qualifications."
+                }
+              }
+            ]
+          },
+          "Lane Override": {
+            "select": {
+              "name": "None"
+            }
+          }
+        },
+        "url": "https://notion.so/00000000-0000-0000-0000-00000000016e"
+      }
+    ],
+    "search_profiles": [
+      {
+        "id": "00000000-0000-0000-0000-00000000016b",
+        "parent": {
+          "type": "data_source_id",
+          "data_source_id": "00000000-0000-0000-0000-000000000123"
+        },
+        "properties": {
+          "Profile": {
+            "title": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "My search"
+                }
+              }
+            ]
+          },
+          "Enabled": {
+            "checkbox": true
+          },
+          "Languages": {
+            "multi_select": [
+              {
+                "name": "en"
+              }
+            ]
+          },
+          "Max New Per Run": {
+            "number": 50
+          }
+        },
+        "url": "https://notion.so/00000000-0000-0000-0000-00000000016b"
+      },
+      {
+        "id": "00000000-0000-0000-0000-0000000001a0",
+        "parent": {
+          "type": "data_source_id",
+          "data_source_id": "00000000-0000-0000-0000-000000000123"
+        },
+        "properties": {
+          "Profile": {
+            "title": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Platform & Distributed Systems"
+                }
+              }
+            ]
+          },
+          "Enabled": {
+            "checkbox": true
+          },
+          "Role Terms": {
+            "multi_select": [
+              {
+                "name": "Platform Engineer"
+              },
+              {
+                "name": "Staff SRE"
+              },
+              {
+                "name": "Backend Architect"
+              }
+            ]
+          },
+          "Skill Terms": {
+            "multi_select": [
+              {
+                "name": "Kubernetes"
+              },
+              {
+                "name": "Python"
+              },
+              {
+                "name": "Go"
+              },
+              {
+                "name": "Distributed Systems"
+              }
+            ]
+          },
+          "Mission Terms": {
+            "multi_select": [
+              {
+                "name": "Developer Tools"
+              },
+              {
+                "name": "Cloud"
+              },
+              {
+                "name": "Climate Tech"
+              }
+            ]
+          },
+          "Excluded Terms": {
+            "multi_select": [
+              {
+                "name": "PHP"
+              },
+              {
+                "name": "WordPress"
+              },
+              {
+                "name": "Junior"
+              }
+            ]
+          },
+          "Location": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Remote US"
+                }
+              }
+            ]
+          },
+          "Remote Only": {
+            "checkbox": true
+          },
+          "Minimum Annual Pay": {
+            "number": 170000
+          }
+        },
+        "url": "https://notion.so/00000000-0000-0000-0000-0000000001a0"
+      }
+    ],
+    "sources": [
+      {
+        "id": "00000000-0000-0000-0000-00000000016c",
+        "parent": {
+          "type": "data_source_id",
+          "data_source_id": "00000000-0000-0000-0000-000000000132"
+        },
+        "properties": {
+          "Source": {
+            "title": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Remotive"
+                }
+              }
+            ]
+          },
+          "Type": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "remotive"
+                }
+              }
+            ]
+          },
+          "Enabled": {
+            "checkbox": false
+          },
+          "Cadence": {
+            "select": {
+              "name": "Daily"
+            }
+          }
+        },
+        "url": "https://notion.so/00000000-0000-0000-0000-00000000016c"
+      },
+      {
+        "id": "00000000-0000-0000-0000-0000000001a1",
+        "parent": {
+          "type": "data_source_id",
+          "data_source_id": "00000000-0000-0000-0000-000000000132"
+        },
+        "properties": {
+          "Source": {
+            "title": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Acme Cloud Careers"
+                }
+              }
+            ]
+          },
+          "Type": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "greenhouse"
+                }
+              }
+            ]
+          },
+          "Target": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "acmecloud"
+                }
+              }
+            ]
+          },
+          "Enabled": {
+            "checkbox": true
+          },
+          "Cadence": {
+            "select": {
+              "name": "Daily"
+            }
+          },
+          "Status": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Active"
+                }
+              }
+            ]
+          }
+        },
+        "url": "https://notion.so/00000000-0000-0000-0000-0000000001a1"
+      }
+    ],
+    "resume_library": [
+      {
+        "id": "00000000-0000-0000-0000-00000000019f",
+        "parent": {
+          "type": "data_source_id",
+          "data_source_id": "00000000-0000-0000-0000-00000000013e"
+        },
+        "properties": {
+          "Resume": {
+            "title": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Staff Platform & SRE Resume (2026)"
+                }
+              }
+            ]
+          },
+          "Document ID": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "0160a788b607f270ff965e45cc328059d4a49939378d121ff42055ac45a6c83c"
+                }
+              }
+            ]
+          },
+          "Tags": {
+            "multi_select": [
+              {
+                "name": "platform"
+              },
+              {
+                "name": "kubernetes"
+              },
+              {
+                "name": "sre"
+              },
+              {
+                "name": "python"
+              }
+            ]
+          },
+          "Availability": {
+            "select": {
+              "name": "Available"
+            }
+          },
+          "Recommendation": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Best fit for Staff Platform and SRE roles."
+                }
+              }
+            ]
+          },
+          "Jobs": {
+            "relation": [
+              {
+                "id": "00000000-0000-0000-0000-000000000195"
+              },
+              {
+                "id": "00000000-0000-0000-0000-000000000196"
+              }
+            ]
+          }
+        },
+        "url": "https://notion.so/00000000-0000-0000-0000-00000000019f"
+      }
+    ]
+  }
+}

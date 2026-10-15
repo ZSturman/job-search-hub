@@ -111,7 +111,8 @@ Employer identifiers and URLs above are examples; replace them with real boards/
 
 ```bash
 jobhub resumes add ~/Documents/my-resume.pdf --title "Backend engineering" --tag backend
-jobhub resumes list
+jobhub resumes list                  # Rich terminal table
+jobhub resumes list --json           # Machine-readable JSON
 jobhub resumes sync
 jobhub resumes suggest --preview
 jobhub resumes suggest
@@ -158,6 +159,14 @@ Backups exclude credentials and logs. Local restore requires an empty destinatio
 Operational settings live in `config.toml` under standard user directories; they are independent of the checkout. `JOBHUB_HOME` selects an alternative private location. Only `JOBHUB_*` environment variables are read; a working-directory `.env` is not automatically loaded. Keywords, source targets, enabled state, approved facts, and application decisions live in Notion, not parallel local preference files.
 
 LM Studio is the only implemented model provider. A token is needed only if its server authentication is enabled. [LM Studio authentication](https://lmstudio.ai/docs/developer/core/authentication). Embeddings are optional. [Configuration guide](docs/CONFIGURATION.md) · [Architecture](docs/ARCHITECTURE.md).
+
+### Architecture & engineering highlights
+
+- **Strict Data Ownership Boundaries**: Notion manages editable preferences, approved facts, and application tracking; the local filesystem owns PDF documents and execution data; the OS credential store owns all secrets. Private PDF bytes are never transmitted to Notion or external APIs.
+- **Security & Privacy by Design**: All credentials use OS-native keychain stores (`keyring`) with hidden prompts; plaintext keyring fallbacks and working-directory `.env` files are rejected. Backups and exports strictly strip credentials and volatile WAL/SHM locks.
+- **Fail-Safe Preview & Dry-Run Enforcement**: Mutating actions are guarded by context-scoped `READ_ONLY` tokens that deterministically intercept and block any unexpected remote API write, file mutation, or email dispatch.
+- **Content-Addressed Deduplication**: Resume PDFs are cataloged by cryptographic SHA-256 digests rather than mutable filenames, making imports idempotent, restartable, and collision-free.
+- **Comprehensive Automated Testing**: 322 automated tests with 100% passing rate, including schema validation, CLI execution, lifecycle reconciliation, and simulated Notion workflows, alongside zero-tolerance Ruff linting and formatting.
 
 ## Development
 

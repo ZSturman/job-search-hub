@@ -36,9 +36,15 @@ def maintenance(args):
     if args.action == "import" and args.source.is_dir():
         output(import_documents(args.source, apply=apply))
         return 0
-    if args.action == "backup" and args.local_only:
-        output(backup(args.file))
-        return 0
+    if args.action == "backup":
+        if args.local_only:
+            output(backup(args.file))
+            return 0
+        if not get_setting("NOTION_ROOT", ""):
+            raise ValueError(
+                "Connect a dedicated hub first: jobhub setup "
+                "(or use --local-only to back up local data without Notion)"
+            )
     if args.action == "capture":
         from job_search_hub.capture.__main__ import main as capture_main
 

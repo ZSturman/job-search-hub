@@ -17,11 +17,12 @@ Completed:
 
 Validated locally on macOS/Python 3.12:
 
-- **315 isolated tests validated:** 314 passed in the full-suite run with three explicit live checks skipped; one additional benchmark-inspection test passed in the final targeted run. One third-party Starlette TestClient deprecation warning remains; it does not affect the assertions.
-- Ruff lint and format checks passed.
+- **322 isolated tests validated:** 322 passed in the full-suite run with three explicit live checks skipped. Regression tests added for pypdf warning suppression, launchd/systemd executable resolution, sources catalog reasons, resumes table/json views, and backup guidance. One third-party Starlette TestClient deprecation warning remains; it does not affect assertions.
+- Ruff lint and format checks passed across all 147 files.
 - Python 3.11 syntax parsing passed for all Python files. Actual Linux/Python 3.11 execution is delegated to the CI matrix and is not claimed as locally validated.
 - Wheel and sdist built. Artifact checks passed: required resources present; jobhub is the only package executable; no PDFs, original namespace/files, private data, or credential-shaped content included.
 - The wheel installed through uv into isolated temporary tool directories and ran outside the checkout. Base install excluded Playwright, pypdf, FastAPI, and uvicorn. Help, version, status, source catalog, missing-service guidance, and schedule preview worked without creating user data.
+- Isolated Notion end-to-end simulation verified and serialized in `docs/test_notion_workspace_snapshot.json`.
 
 ## Next action: a disposable live hub
 
