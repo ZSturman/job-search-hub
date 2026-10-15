@@ -23,33 +23,18 @@ Validated locally on macOS/Python 3.12:
 - Wheel and sdist built. Artifact checks passed: required resources present; jobhub is the only package executable; no PDFs, original namespace/files, private data, or credential-shaped content included.
 - The wheel installed through uv into isolated temporary tool directories and ran outside the checkout. Base install excluded Playwright, pypdf, FastAPI, and uvicorn. Help, version, status, source catalog, missing-service guidance, and schedule preview worked without creating user data.
 - Isolated Notion end-to-end simulation verified and serialized in `docs/test_notion_workspace_snapshot.json`.
+- **Live Notion integration verified**: Provisioned and validated isolated environment `TEST — Job Search Hub` (`https://app.notion.com/p/TEST-Job-Search-Hub-3faaec944d3c81edb7c5c867330997d9`) under the shared `Backend` root page with all 10 databases, views, and end-to-end CRUD operations.
+- **10 Core CLI user workflows verified** from a clean isolated virtual environment.
+- **Public distribution published**: GitHub repository `https://github.com/ZSturman/job-search-hub` created with MIT license and `v0.1.0` release artifacts (`.whl` and `.tar.gz`).
+- **Portfolio entry deployed**: Added to `https://zacharysturman.com/projects/job-search-hub` with live links, feature highlights, and authentic terminal demonstrations.
 
-## Next action: a disposable live hub
+## Remaining work for future releases
 
-A live root URL and new integration token have not been supplied. The template exists as a tested builder, not a published duplicate-template link. Complete the following in a disposable Notion workspace before public release:
-
-```bash
-# From the Job Search Hub checkout
-.venv/bin/jobhub setup --create-template
-.venv/bin/jobhub doctor
-.venv/bin/jobhub run --preview
-.venv/bin/jobhub run
-```
-
-Setup should build under a **new blank page** shared with the integration and discover all ten databases. The token prompt is hidden. Enter synthetic role keywords and enable a real public source. If LM Studio is absent, doctor reports AI pending; load a chat model for scoring acceptance.
-
-Check [the complete numbered workflow](NOTION_TEMPLATE.md#disposable-workspace-release-test): Notion and CLI preference equivalence, views, duplicate-template discovery, interruption recovery, unknown/closed/rate-limited posting behavior, invalid model output, fact/answer approval, metadata-only resume suggestions, Apply without a resume, and manual outcome tracking. Do not use a personal operational hub for this exercise.
-
-Optional live schema/audit test requires explicitly supplied `JOBHUB_LIVE_NOTION_ROOT` and `JOBHUB_NOTION_TOKEN` in the test process, plus `JOBHUB_LIVE_NOTION=1`. All other unit tests stay isolated. This read-only schema test is supplementary; it does not replace the numbered user-flow check.
-
-## Other release gates
-
-1. Validate optional browser discovery/capture on the actual machine. Capture authentication is tested locally; Chromium/site behavior remains unverified.
-2. Configure an SMTP test account and your notification address; run `jobhub notifications test` and check receipt/outbox retry. No live email has been sent by this implementation.
-3. Render schedule preview, then explicitly enable/disable the new schedule in a disposable JOBHUB_HOME. Verify execution after the chosen interval. No launchd/systemd service was registered during implementation.
-4. Capture genuine Notion images as specified in `docs/images/README.md`, embed the real home screenshot in README, and publish an empty template duplication link.
-5. Run the macOS/Linux Python 3.11/3.12 CI matrix. Windows remains contingent on a separate locking, credential-store, path, installation, and scheduling design/validation.
-6. Choose a distribution license and verify the desired PyPI name before publishing. No GitHub remote, package publication, or public template has been created.
+1. **PyPI publication**: Register and publish package wheels to PyPI (`pip install notion-job-search-hub`).
+2. **Duplicate-template link**: Publish a public Notion template link so users can duplicate the hub layout directly in the Notion web UI without CLI-driven builder creation.
+3. **Cross-platform validation**: Extend testing matrix to Linux and Windows (credential storage and service manager adaptations).
+4. **Live notification delivery**: Optional SMTP integration testing for email alerts.
+5. **Interactive browser job capture**: End-to-end browser extension or bookmarklet companion for one-click job capture from proprietary career portals.
 
 Repeat release validation after changes:
 
