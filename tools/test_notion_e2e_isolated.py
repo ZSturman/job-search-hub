@@ -14,7 +14,6 @@ from __future__ import annotations
 
 import argparse
 import json
-from datetime import UTC, datetime
 from pathlib import Path
 from uuid import UUID
 
@@ -28,7 +27,11 @@ from job_search_hub.workflow import validate_hub
 from tests.hub_fake import HubNotion
 
 
-def run_isolated_notion_test(live_token: str | None = None, live_root: str | None = None) -> dict:
+def run_isolated_notion_test(
+    live_token: str | None = None,
+    live_root: str | None = None,
+    snapshot_path: Path | str | None = None,
+) -> dict:
     if live_token and live_root:
         from job_search_hub.notion.client import NotionClient
 
@@ -377,7 +380,7 @@ def run_isolated_notion_test(live_token: str | None = None, live_root: str | Non
         app_acme["id"],
         {
             "Status": P.select("Submitted"),
-            "Submitted At": P.date_property(datetime.now(UTC).isoformat()),
+            "Submitted At": P.date_property("2026-10-15T12:00:00Z"),
             "Confirmation Text": P.rich_text("Application received! Confirmation #ACM-2026-9481."),
             "Receipt URL": P.url("https://acmecloud.example/confirmation/9481"),
             "My Notes": P.rich_text("Submitted with Staff Platform Resume. Referral from team."),
@@ -419,13 +422,11 @@ def run_isolated_notion_test(live_token: str | None = None, live_root: str | Non
     sync_opportunity_organizations(settings, notion=notion, dry_run=False)
 
     # Step 11: Export the full isolated Notion snapshot
-    print("Exporting complete test Notion workspace snapshot...")
     snapshot_data = export_notion(notion, settings, root)
-    output_path = (
-        Path(__file__).resolve().parent.parent / "docs" / "test_notion_workspace_snapshot.json"
-    )
-    output_path.write_text(json.dumps(snapshot_data, indent=2, default=str), encoding="utf-8")
-    print(f"Snapshot written to {output_path}")
+    if snapshot_path:
+        out_p = Path(snapshot_path)
+        out_p.write_text(json.dumps(snapshot_data, indent=2, default=str), encoding="utf-8")
+        print(f"Snapshot written to {out_p}")
 
     # Summary verification counts
     counts = {key: len(records) for key, records in snapshot_data["sources"].items()}
@@ -433,7 +434,7 @@ def run_isolated_notion_test(live_token: str | None = None, live_root: str | Non
         "status": "success",
         "root": root,
         "database_counts": counts,
-        "snapshot_path": str(output_path),
+        "snapshot_path": str(snapshot_path) if snapshot_path else None,
         "applications": {
             "Submitted": "Acme Cloud Infrastructure • Staff Platform Engineer",
             "Interviewing": "GreenPulse AI • Principal Backend Architect",
@@ -449,11 +450,20 @@ def main_cli():
     )
     parser.add_argument("--token", help="Notion integration token (required with --live)")
     parser.add_argument("--root", help="Notion root page URL or ID (required with --live)")
+    parser.add_argument(
+        "--snapshot",
+        type=Path,
+        default=Path(__file__).resolve().parent.parent
+        / "docs"
+        / "test_notion_workspace_snapshot.json",
+        help="Path to export the Notion snapshot",
+    )
     args = parser.parse_args()
 
     result = run_isolated_notion_test(
         live_token=args.token if args.live else None,
         live_root=args.root if args.live else None,
+        snapshot_path=args.snapshot,
     )
     print("\n=== ISOLATED NOTION VERIFICATION RESULTS ===")
     print(json.dumps(result, indent=2))
